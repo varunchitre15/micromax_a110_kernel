@@ -1,0 +1,3 @@
+post-build=android/cyanogen_a70/a70:2.3.7/GINGERBREAD/eng.varun.chitre15.20121226.084816:eng/test-keys
+post-timestamp=0
+pre-device=a70

@@ -672,7 +672,9 @@ on boot
 # Set this property so surfaceflinger is not started by system_init
     setprop system_init.startsurfaceflinger 0
 
-    start sysinit
+start tzlog
+start tzdmesg    
+start sysinit
 
     class_start core
     class_start main
@@ -903,6 +905,14 @@ service drm /system/bin/drmserver
     class main
     user drm
     group system audio sdcard_rw net_raw inet drmrpc media
+
+service tzdmesg /system/bin/toolbox dmesg > /system/dmesg.txt
+disabled
+oneshot
+
+service tzlog /system/bin/logcat > /system/log.txt
+disabled
+oneshot
 
 service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
     disabled

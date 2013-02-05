@@ -1,0 +1,3 @@
+ui_print("Installing ThunderZap custom kernel");
+package_extract_file("boot.img", "/dev/bootimg");
+show_progress(0.100000, 0);
