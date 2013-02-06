@@ -1,3 +1,4 @@
+TARGET_PRODUCT=s9081
 ifneq (true,$(__mtk_main_makefile_include))
 __mtk_main_makefile_include := true
 
